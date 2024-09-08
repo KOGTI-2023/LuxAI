@@ -1,31 +1,41 @@
-# LuxAI_AI-Stock-Predict_App
+# Continue Your Work
 
-This repository contains the LuxAI_AI-Stock-Predict_App, a machine learning application for predicting stock prices.
+This application is designed to help you continue your work. The necessary data folders are missing and need to be created. These include:
 
-## Structure
+- `data/`
+- `docker-compose/`
+- `models/`
+- `static/`
+- `templates/`
 
-The repository is structured as follows:
+## Directory Structure
 
-- `app.py`: The main application file.
-- `data/`: Directory containing the data used by the application.
-- `models/`: Directory containing the machine learning models.
-- `static/`: Directory containing static files like CSS and JavaScript.
-- `templates/`: Directory containing HTML templates.
-- `docker-compose.yml`: Docker compose file for setting up the application environment.
-- `example-env.1`: Template for the .env file used by docker-compose.
+- `app.py`: The main application file. It uses data from the `data/` directory, machine learning models from the `models/` directory, static files from the `static/` directory, and HTML templates from the `templates/` directory. It may also reference the `docker-compose/` directory.
 
-## Setup
+- `data/`: This directory will contain data files that are used by `app.py`.
 
-To set up the application, follow these steps:
+- `docker-compose/`: This directory may contain additional docker-compose files that are used by `app.py`.
 
-1. Clone the repository.
-2. Create a .env file based on the `example-env.1` template.
-3. Run `docker-compose up` to start the application.
+- `models/`: This directory will contain machine learning models that are used by `app.py`.
 
-## Usage
+- `static/`: This directory will contain static files like CSS and JavaScript that are used by `app.py`.
 
-Once the application is running, you can access it at `http://localhost:5000`.
+- `templates/`: This directory will contain HTML templates that are used by `app.py`.
 
-## Contributing
+## Getting Started
 
-Please ensure that any changes you make are compatible with the existing structure and functionality of the application. All changes should be made on the main branch.
+To get started, create the missing directories and populate them with the necessary files. Then, run the `app.py` file.
+
+## Docker Compose
+
+The `docker-compose.yml` file references the `app.py` file and the directories `data/`, `docker-compose/`, `models/`, `static/`, and `templates/`. Make sure all these files and directories are in place before running the docker-compose command.
+
+## Shared Dependencies
+
+- Data schemas: Shared between `app.py`, `data/`, and `models/`.
+- Exported variables: Shared between all files and directories.
+- DOM element id names: Shared between `app.py`, `static/`, and `templates/`.
+- Message names: Shared between all files and directories.
+- Function names: Shared between `app.py`, `static/`, and `templates/`.
+
+Please ensure these shared dependencies are consistent across all files and directories.

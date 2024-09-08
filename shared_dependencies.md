@@ -1,11 +1,23 @@
+1. "app.py": This file will likely import and use data from the "data/" directory, machine learning models from the "models/" directory, static files from the "static/" directory, and HTML templates from the "templates/" directory. It may also reference the "docker-compose/" directory.
+
+2. "docker-compose.yml": This file will likely reference the "app.py" file and the directories "data/", "docker-compose/", "models/", "static/", and "templates/". 
+
+3. "README.md": This file may reference all other files and directories, providing explanations and instructions for their use.
+
+4. "data/": This directory will contain data files that are used by "app.py" and possibly referenced in "docker-compose.yml" and "README.md".
+
+5. "docker-compose/": This directory may contain additional docker-compose files that are used by "app.py" and possibly referenced in "docker-compose.yml" and "README.md".
+
+6. "models/": This directory will contain machine learning models that are used by "app.py" and possibly referenced in "docker-compose.yml" and "README.md".
+
+7. "static/": This directory will contain static files like CSS and JavaScript that are used by "app.py" and possibly referenced in "docker-compose.yml" and "README.md".
+
+8. "templates/": This directory will contain HTML templates that are used by "app.py" and possibly referenced in "docker-compose.yml" and "README.md".
+
 Shared Dependencies:
 
-1. "app.py": This is the main application file. It will likely import and use data from the "data/" directory, use models from the "models/" directory, and serve static files from the "static/" directory. It will also render templates from the "templates/" directory.
-
-2. "docker-compose.yml": This file will define the services that make up the application in the docker environment. It will need to reference the "app.py" file and may also need to reference the "data/", "models/", "static/", and "templates/" directories. It will also use the environment variables defined in the ".env" file, which will be based on the "example-env.1" file.
-
-3. "example-env.1": This file will serve as a template for the ".env" file, which will be used by the "docker-compose.yml" file. It will define environment variables that are used by the application, likely including variables that are used in "app.py".
-
-4. "README.md": This file will provide information about the application and instructions for how to run it. It will likely reference all other files and directories, as it needs to explain what they are and how they are used.
-
-5. "data/", "models/", "static/", "templates/": These directories will contain files that are used by "app.py". They may also be referenced in the "docker-compose.yml" file and the "README.md" file. The "data/" directory will contain the data used by the application, the "models/" directory will contain any machine learning models, the "static/" directory will contain static files like CSS and JavaScript, and the "templates/" directory will contain HTML templates.
+- Data schemas: Likely shared between "app.py", "data/", and "models/".
+- Exported variables: Likely shared between all files and directories.
+- DOM element id names: Likely shared between "app.py", "static/", and "templates/".
+- Message names: Likely shared between all files and directories.
+- Function names: Likely shared between "app.py", "static/", and "templates/".
